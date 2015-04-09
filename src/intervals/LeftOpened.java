@@ -8,7 +8,7 @@ public class LeftOpened extends Interval{
 	}
 
 	public boolean includes(double value){
-		return false;		
+		return minimum < value && value <= maximum;	
 	}
 	
 }
