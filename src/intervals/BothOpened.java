@@ -7,4 +7,8 @@ public class BothOpened extends Interval{
 		// TODO Auto-generated constructor stub
 	}
 
+	public boolean includes(double value){
+		return false;		
+	}
+	
 }
