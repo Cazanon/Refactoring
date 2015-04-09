@@ -11,4 +11,15 @@ public class RightOpened extends Interval{
 		return getMinimum() <= value && value < getMaximum();	
 	}
 
+	public boolean intersectsWith(Interval interval) {
+        if(this.getMinimum() == interval.getMaximum()) {
+            return interval.getOpening() == Opening.LEFT_OPENED || interval.getOpening() == Opening.UNOPENED;
+        }
+        if(this.getMaximum() == interval.getMinimum()) {
+            return false;
+        }
+        return this.includes(interval.getMinimum()) || this.includes(interval.getMaximum());
+
+    }
+	
 }

@@ -160,4 +160,12 @@ public abstract class Interval {
 		this.maximum = maximum;
 	}
 
+	public Opening getOpening() {
+		return opening;
+	}
+
+	public void setOpening(Opening opening) {
+		this.opening = opening;
+	}
+
 }

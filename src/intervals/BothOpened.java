@@ -10,5 +10,15 @@ public class BothOpened extends Interval{
 	public boolean includes(double value){
 		return getMinimum() < value && value < getMaximum();
 	}
+
+	public boolean intersectsWith(Interval interval) {
+        if(this.getMinimum() == interval.getMaximum()) {
+            return false;
+        }
+        if(this.getMaximum() == interval.getMinimum()) {
+            return false;
+        }
+        return this.includes(interval.getMinimum()) || this.includes(interval.getMaximum());
+    }
 	
 }
