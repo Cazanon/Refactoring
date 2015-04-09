@@ -8,11 +8,11 @@ public class IntervalFactory {
 		case BOTH_OPENED:
 			return new BothOpened(minimum,maximum,opening);
 		case LEFT_OPENED:
-			return new BothOpened(minimum,maximum,opening);
+			return new LeftOpened(minimum,maximum,opening);
 		case RIGHT_OPENED:
-			return new BothOpened(minimum,maximum,opening);
+			return new RightOpened(minimum,maximum,opening);
 		case UNOPENED:
-			return new BothOpened(minimum,maximum,opening);
+			return new UnOpened(minimum,maximum,opening);
 		default:
 			return null;
 		}
