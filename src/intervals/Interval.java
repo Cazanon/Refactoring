@@ -20,8 +20,20 @@ public abstract class Interval {
 		return maximum.greaterThan(value) && minimum.lessThan(value);		
 	}
 
-	public boolean includes(Interval interval){		
-		return this.includes(interval.getMinimum().getValue()) && this.includes(interval.getMaximum().getValue());		
+	public boolean includes(Interval interval){	
+		
+		 
+		
+		
+		
+		
+		if(minimum.in(interval.getMinimum().getValue()) 		&&
+		   minimum.lessThan(interval.getMinimum().getValue())	&&		
+		   maximum.in(interval.getMaximum().getValue()) 		&&
+		   maximum.greaterThan(interval.getMaximum().getValue())){
+			return true;
+		}
+		return false;
 	}
 
 	public abstract boolean intersectsWith(Interval interval);

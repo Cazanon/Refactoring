@@ -14,8 +14,8 @@ public class OpenedPoint extends Point{
 		return this.getValue() > value;
 	}
 	
-	@Override
-	public String toString(){
-		return "("+this.getValue()+" ";
+	public boolean in(double value){
+		return this.getValue() != value;
 	}
+	
 }
