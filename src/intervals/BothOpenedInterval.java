@@ -9,7 +9,8 @@ public class BothOpenedInterval extends Interval{
 
 	@Override
 	public boolean includes(double value){
-		return getMinimum() < value && value < getMaximum();
+		Point point = new Point(value);
+		return point.greaterThan(getMinimum()) && point.lessThan(getMaximum());
 	}
 
 	@Override
