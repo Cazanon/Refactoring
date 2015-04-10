@@ -5,12 +5,6 @@ public class LeftOpenedInterval extends Interval{
 	public LeftOpenedInterval(Point minimum, Point maximum, Opening opening) {
 		super(minimum, maximum, opening);
 	}
-
-	@Override
-	public boolean includes(double value){
-		Point point = new OpenedPoint(value);
-		return point.greaterThan(getMinimum()) && point.lessThan(getMaximum());
-	}
 	
 	@Override
 	public boolean intersectsWith(Interval interval) {

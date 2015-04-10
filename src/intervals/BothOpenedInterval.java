@@ -7,12 +7,6 @@ public class BothOpenedInterval extends Interval{
 	}
 
 	@Override
-	public boolean includes(double value){
-		Point point = new OpenedPoint(value);
-		return point.greaterThan(getMinimum()) && point.lessThan(getMaximum());
-	}
-
-	@Override
 	public boolean intersectsWith(Interval interval) {
         if(this.getMinimum() == interval.getMaximum()) {
             return false;

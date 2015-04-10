@@ -8,9 +8,9 @@ public abstract class Point {
 		this.value = value;
 	}
 
-	public abstract boolean lessThan(Point value);
+	public abstract boolean lessThan(double value);
 	
-	public abstract boolean greaterThan(Point value);
+	public abstract boolean greaterThan(double value);
 	
 	public double getValue() {
 		return value;

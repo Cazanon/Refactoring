@@ -16,7 +16,9 @@ public abstract class Interval {
 		return (maximum.getValue() + minimum.getValue()) / 2;
 	}
 
-	public abstract boolean includes(double value);
+	public boolean includes(double value){	
+		return minimum.greaterThan(value) && maximum.lessThan(value);		
+	}
 
 	public abstract boolean includes(Interval interval);
 
