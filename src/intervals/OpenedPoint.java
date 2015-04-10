@@ -6,12 +6,12 @@ public class OpenedPoint extends Point{
 		super(value);
 	}
 
-	public boolean lessThan(double value){
-		return this.getValue() < value;
+	public boolean lessThan(Point point){
+		return this.getValue() < point.getValue();
 	}
 	
-	public boolean greaterThan(double value){
-		return this.getValue() > value;
+	public boolean greaterThan(Point point){
+		return this.getValue() > point.getValue();
 	}
 	
 }

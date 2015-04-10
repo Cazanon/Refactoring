@@ -20,14 +20,14 @@ public class RightOpenedInterval extends Interval{
         if(this.getMaximum() == interval.getMinimum()) {
             return false;
         }
-        return this.includes(interval.getMinimum()) || this.includes(interval.getMaximum());
+        return this.includes(interval.getMinimum().getValue()) || this.includes(interval.getMaximum().getValue());
 
     }
 	
 	@Override
 	public boolean includes(Interval interval) {
-		boolean minimumIncluded = this.includes(interval.getMinimum());
-		boolean maximumIncluded = this.includes(interval.getMaximum());
+		boolean minimumIncluded = this.includes(interval.getMinimum().getValue());
+		boolean maximumIncluded = this.includes(interval.getMaximum().getValue());
 		switch (interval.getOpening()) {
 		case BOTH_OPENED:
 			return (minimumIncluded || getMinimum() == interval.getMinimum())

@@ -34,20 +34,20 @@ public abstract class Interval {
 		return false;
 	}
 
-	public double getMinimum() {
-		return minimum.getValue();
+	public Point getMinimum() {
+		return minimum;
 	}
 
-	public void setMinimum(double minimum) {
-		this.minimum.setValue(minimum);
+	public void setMinimum(Point minimum) {
+		this.minimum = minimum;
 	}
 
-	public double getMaximum() {
-		return maximum.getValue();
+	public Point getMaximum() {
+		return maximum;
 	}
 
-	public void setMaximum(double maximum) {
-		this.maximum.setValue(maximum);
+	public void setMaximum(Point maximum) {
+		this.maximum = maximum;
 	}
 
 	public Opening getOpening() {

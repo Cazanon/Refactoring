@@ -21,13 +21,13 @@ public class LeftOpenedInterval extends Interval{
             return interval.getOpening() == Opening.RIGHT_OPENED
                     || interval.getOpening() == Opening.UNOPENED;
         }
-        return this.includes(interval.getMinimum()) || this.includes(interval.getMaximum());
+        return this.includes(interval.getMinimum().getValue()) || this.includes(interval.getMaximum().getValue());
     }
 	
 	@Override
 	public boolean includes(Interval interval) {
-		boolean minimumIncluded = this.includes(interval.getMinimum());
-		boolean maximumIncluded = this.includes(interval.getMaximum());
+		boolean minimumIncluded = this.includes(interval.getMinimum().getValue());
+		boolean maximumIncluded = this.includes(interval.getMaximum().getValue());
 		switch (interval.getOpening()) {
 		case BOTH_OPENED:
 			return (minimumIncluded || getMinimum() == interval.getMinimum())
