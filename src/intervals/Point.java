@@ -20,7 +20,7 @@ public class Point {
 		return this.value <= value;
 	}
 	
-	public boolean greaterEqualsThan(double value){
+	public boolean greaterOrEqualsThan(double value){
 		return this.value >= value;
 	}
 
