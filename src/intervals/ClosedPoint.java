@@ -14,4 +14,9 @@ public class ClosedPoint extends Point{
 		return this.getValue() >= value;
 	}
 	
+	@Override
+	public String toString(){
+		return "["+this.getValue()+" ";
+	}
+	
 }

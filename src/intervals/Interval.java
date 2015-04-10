@@ -20,14 +20,15 @@ public abstract class Interval {
 		return maximum.greaterThan(value) && minimum.lessThan(value);		
 	}
 
-	public abstract boolean includes(Interval interval);
+	public boolean includes(Interval interval){		
+		return this.includes(interval.getMinimum().getValue()) && this.includes(interval.getMaximum().getValue());		
+	}
 
 	public abstract boolean intersectsWith(Interval interval);
 
 	@Override
 	public String toString() {
-		// TODO
-		return null;
+		return minimum + "" + maximum;
 	}
 
 	@Override
