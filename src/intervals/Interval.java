@@ -17,7 +17,7 @@ public abstract class Interval {
 	}
 
 	public boolean includes(double value){	
-		return minimum.greaterThan(value) && maximum.lessThan(value);		
+		return maximum.greaterThan(value) && minimum.lessThan(value);		
 	}
 
 	public abstract boolean includes(Interval interval);
