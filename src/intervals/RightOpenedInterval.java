@@ -2,9 +2,8 @@ package intervals;
 
 public class RightOpenedInterval extends Interval{
 
-	public RightOpenedInterval(double minimum, double maximum, Opening opening) {
+	public RightOpenedInterval(Point minimum, Point maximum, Opening opening) {
 		super(minimum, maximum, opening);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
