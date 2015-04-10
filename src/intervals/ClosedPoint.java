@@ -1,5 +1,5 @@
 package intervals;
 
-public class ClosedPoint extends Point{
+public class ClosedPoint{
 
 }
