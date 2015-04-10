@@ -1,6 +1,6 @@
 package intervals;
 
-public class Point {
+public abstract class Point {
 	
 	private double value;
 	
@@ -8,22 +8,10 @@ public class Point {
 		this.value = value;
 	}
 
-	public boolean lessThan(double value){
-		return this.value < value;
-	}
+	public abstract boolean lessThan(double value);
 	
-	public boolean greaterThan(double value){
-		return this.value > value;
-	}
+	public abstract boolean greaterThan(double value);
 	
-	public boolean lessOrEqualsThan(double value){
-		return this.value <= value;
-	}
-	
-	public boolean greaterOrEqualsThan(double value){
-		return this.value >= value;
-	}
-
 	public double getValue() {
 		return value;
 	}
