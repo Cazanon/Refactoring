@@ -24,7 +24,9 @@ public abstract class Interval {
 		return minimum.lessThan(interval.getMinimum()) && maximum.greaterThan(interval.getMaximum());
 	}
 
-	public abstract boolean intersectsWith(Interval interval);
+	public boolean intersectsWith(Interval interval){
+		return includes(interval.getMinimum().getValue()) || includes(interval.getMaximum().getValue()); 
+	}
 
 	@Override
 	public String toString() {
