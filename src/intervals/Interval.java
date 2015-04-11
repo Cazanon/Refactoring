@@ -21,19 +21,7 @@ public abstract class Interval {
 	}
 
 	public boolean includes(Interval interval){	
-		
-		 
-		
-		
-		
-		
-		if(minimum.in(interval.getMinimum().getValue()) 		&&
-		   minimum.lessThan(interval.getMinimum().getValue())	&&		
-		   maximum.in(interval.getMaximum().getValue()) 		&&
-		   maximum.greaterThan(interval.getMaximum().getValue())){
-			return true;
-		}
-		return false;
+		return minimum.lessThan(interval.getMinimum().getValue()) && maximum.greaterThan(interval.getMaximum().getValue());
 	}
 
 	public abstract boolean intersectsWith(Interval interval);

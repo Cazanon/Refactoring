@@ -14,8 +14,4 @@ public class OpenedPoint extends Point{
 		return this.getValue() > value;
 	}
 	
-	public boolean in(double value){
-		return this.getValue() != value;
-	}
-	
 }

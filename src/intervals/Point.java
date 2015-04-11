@@ -12,8 +12,6 @@ public abstract class Point {
 	
 	public abstract boolean greaterThan(double value);
 	
-	public abstract boolean in(double value);
-	
 	public double getValue() {
 		return value;
 	}
