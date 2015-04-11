@@ -10,7 +10,19 @@ public abstract class Point {
 
 	public abstract boolean lessThan(double value);
 	
+	public abstract boolean greaterThan(Point value);
+	
+	public abstract boolean lessThan(Point value);
+	
 	public abstract boolean greaterThan(double value);
+	
+	public abstract boolean lessThan(ClosedPoint point);
+
+	public abstract boolean greaterThan(ClosedPoint point);
+	
+	public abstract boolean lessThan(OpenedPoint point);
+
+	public abstract boolean greaterThan(OpenedPoint point);
 	
 	public double getValue() {
 		return value;

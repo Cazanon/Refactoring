@@ -21,19 +21,18 @@ public abstract class Interval {
 	}
 
 	public boolean includes(Interval interval){	
-		return minimum.lessThan(interval.getMinimum().getValue()) && maximum.greaterThan(interval.getMaximum().getValue());
+		return minimum.lessThan(interval.getMinimum()) && maximum.greaterThan(interval.getMaximum());
 	}
 
 	public abstract boolean intersectsWith(Interval interval);
 
 	@Override
 	public String toString() {
-		return minimum + "" + maximum;
+		return null;
 	}
 
 	@Override
 	public boolean equals(Object object) {
-		// TODO
 		return false;
 	}
 
