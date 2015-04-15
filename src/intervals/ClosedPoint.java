@@ -45,5 +45,10 @@ public class ClosedPoint extends Point{
 	public boolean greaterThan(OpenedPoint point) {
 		return this.getValue() < point.getValue();
 	}
+
+	@Override
+	public boolean included() {
+		return true;
+	}
 	
 }

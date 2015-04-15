@@ -20,6 +20,8 @@ public abstract class Point {
 	public abstract boolean lessThan(OpenedPoint point);
 	public abstract boolean greaterThan(OpenedPoint point);
 	
+	public abstract boolean included();
+	
 	public double getValue() {
 		return value;
 	}
