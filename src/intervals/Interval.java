@@ -25,7 +25,33 @@ public class Interval {
 	}
 
 	public boolean intersectsWith(Interval interval){
-		return includes(interval.getMinimum().getValue()) || includes(interval.getMaximum().getValue()); 
+		if (minimum.getValue() == interval.maximum.getValue()) {
+			switch (opening) {
+			case BOTH_OPENED:
+			case LEFT_OPENED:
+				return false;
+			case RIGHT_OPENED:
+			case UNOPENED:
+				return interval.opening == Opening.LEFT_OPENED || interval.opening == Opening.UNOPENED;
+			default:
+				assert false;
+				return false;
+			}
+		}
+		if (maximum.getValue() == interval.minimum.getValue()) {
+			switch (opening) {
+			case BOTH_OPENED:
+			case RIGHT_OPENED:
+				return false;
+			case LEFT_OPENED:
+			case UNOPENED:
+				return interval.opening == Opening.RIGHT_OPENED || interval.opening == Opening.UNOPENED;
+			default:
+				assert false;
+				return false;
+			}
+		}
+		return this.includes(interval.minimum.getValue()) || this.includes(interval.maximum.getValue());
 	}
 
 	@Override
